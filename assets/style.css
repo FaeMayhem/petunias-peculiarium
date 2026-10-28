@@ -1,0 +1,179 @@
+:root {
+  --paper: #f4ede0;
+  --paper-deep: #e9dfcc;
+  --ink: #2a211b;
+  --ink-soft: #5c4d42;
+  --rule: #c9b89c;
+  --accent: #7a2430;
+  --accent-soft: #a8505b;
+  --card: #fbf7ef;
+  --display: "IM Fell English", Georgia, serif;
+  --body: "Source Serif 4", Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17120f;
+    --paper-deep: #211a16;
+    --ink: #ece2d2;
+    --ink-soft: #b8a996;
+    --rule: #4a3d33;
+    --accent: #d07a83;
+    --accent-soft: #e29aa2;
+    --card: #1e1814;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-soft); }
+
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 16px; }
+
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding: 2.5rem 0 1.75rem;
+  text-align: center;
+}
+
+header.site .kicker {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.5rem;
+}
+
+header.site h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+header.site h1 a { color: inherit; text-decoration: none; }
+
+header.site .tagline {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0.75rem 0 0;
+}
+
+main { padding: 2rem 0 3rem; }
+
+h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin: 2.5rem 0 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.3rem;
+}
+
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+
+.listen {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.listen p { margin: 0; }
+
+ol.episodes { list-style: none; padding: 0; margin: 0; }
+
+ol.episodes li {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 0 0.75rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+ol.episodes .num {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+ol.episodes .title { font-weight: 600; }
+
+ol.episodes .meta {
+  grid-column: 2;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--rule);
+  padding: 0 0.45rem;
+  margin-right: 0.4rem;
+}
+
+figure {
+  margin: 1.5rem 0;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 0.75rem;
+}
+
+figure img { display: block; width: 100%; height: auto; }
+
+figcaption { font-size: 0.85rem; margin-top: 0.6rem; }
+
+figcaption .credit { display: block; color: var(--ink-soft); font-size: 0.78rem; margin-top: 0.25rem; }
+
+.placeholder {
+  border: 1px dashed var(--rule);
+  color: var(--ink-soft);
+  font-style: italic;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.record-legend {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .record-legend { grid-template-columns: 1fr 1fr; }
+}
+
+.record-legend > div {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 0.75rem 1rem;
+}
+
+.record-legend h3 { margin-top: 0; }
+
+ol.sources li { margin-bottom: 0.6rem; }
+
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0 2.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
